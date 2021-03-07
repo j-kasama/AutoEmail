@@ -36,7 +36,7 @@ def send_mail(file):
         print(err)
         exit(1)
 
-    fromaddr = "mailtestfor_man@yahoo.co.jp"
+    fromaddr = "user_id@smtp.com"
 
     for key, item in data_dictionary.items():
         toaddr = key
