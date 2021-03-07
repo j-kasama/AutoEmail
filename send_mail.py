@@ -25,6 +25,10 @@ def make_data_dict(file):
     return dict(zip(student_address, list_of_dict))
 
 def send_mail(file):
+    #Use your own Username, Password and email address.
+    #Username = 
+    #Passwd = 
+    #fromaddr = 
     data_dictionary = make_data_dict(file)
     server = SMTP_SSL("smtp.mail.yahoo.co.jp", 465)
     choice = random.randint(0, len(data_dictionary) - 1)
@@ -35,8 +39,6 @@ def send_mail(file):
     except SMTPException as err:
         print(err)
         exit(1)
-
-    fromaddr = "user_id@smtp.com"
 
     for key, item in data_dictionary.items():
         toaddr = key
