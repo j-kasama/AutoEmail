@@ -30,7 +30,7 @@ def send_mail(file):
     choice = random.randint(0, len(data_dictionary) - 1)
     count = 0
     try:
-        server.login("mailtestfor_man", "Umauma#7532")
+        server.login(Username, Passwd) #Use your own Username and Password for SMTP Server
         
     except SMTPException as err:
         print(err)
