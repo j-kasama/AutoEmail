@@ -25,12 +25,16 @@ def make_data_dict(file):
     return dict(zip(student_address, list_of_dict))
 
 def send_mail(file):
-    #Use your own Username, Password and email address.
-    #Username = 
-    #Passwd = 
-    #fromaddr = 
+    #Input your SMTPServer and Port Number.
+    #SMTPServer =       #string
+    #Port =             #int
+
+    #Input Username, password, and email address for SMTPServer.
+    #Username =         #string
+    #Passwd =           #string
+    #fromaddr =         #string
     data_dictionary = make_data_dict(file)
-    server = SMTP_SSL("smtp.mail.yahoo.co.jp", 465)
+    server = SMTP_SSL(SMTPServer, Port)
     choice = random.randint(0, len(data_dictionary) - 1)
     count = 0
     try:
